@@ -1,4 +1,9 @@
+from tensorflow.keras.preprocessing.text import Tokenizer
+
 from stop_words import get_stop_words
+
+def tokener(**tokenargs):
+  return Tokenizer(**tokenargs)
 
 def stopper(sentence : str):
   unlist = get_stop_words('en')
